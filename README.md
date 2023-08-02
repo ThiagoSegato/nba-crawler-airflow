@@ -1,5 +1,6 @@
 # NBA Data Crawler - Airflow
-Somente linux!
+Somente linux!<br>
+Autor: [@caiocolares](https://www.github.com/caiocolares)
 
 ## Configurando o projeto
 
@@ -61,9 +62,6 @@ Senha: Copie a senha no arquivo `standalone_admin_password.txt`
 
 #### Testando o Operador diretamento do vscode
 ![image](https://github.com/caiocolares/nba-crawler-airflow/assets/26276218/b8bd4a52-6541-4cd1-ada0-e8eac02d8c86)
-
-### Autor
-- [@caiocolares](https://www.github.com/caiocolares)
 
 ### Bibliotecas utilizadas
 - [Airflow](https://airflow.apache.org/)
