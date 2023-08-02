@@ -34,7 +34,7 @@ airflow-webserver.pid
 __pypackages__/
 
 # Environments
-.env
+# .env Vscode folder plugins
 .venv
 env/
 venv/
