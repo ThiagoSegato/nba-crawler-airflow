@@ -8,9 +8,9 @@ class NBAMergeOperator(BaseOperator):
 
     template_fields = ['process_date']
 
-    def __init__(self, process_date, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.process_date = process_date
+        self.process_date = "{{ ds }}"
 
 
     def execute(self, context):

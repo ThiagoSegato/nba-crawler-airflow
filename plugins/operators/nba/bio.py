@@ -17,9 +17,9 @@ class NBABioOperator(BaseOperator):
 
     template_fields = ['process_date']
     
-    def __init__(self, process_date, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.process_date = process_date
+        self.process_date = "{{ ds }}"
 
     def load_players(self):
         df = pd.read_csv(self.file_source)

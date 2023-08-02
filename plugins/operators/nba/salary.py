@@ -15,14 +15,12 @@ class NBASalaryOperator(BaseOperator):
 
     @apply_defaults
     def __init__(self,  
-                 process_date: str, 
                  *args, 
                  **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
 
-        print(process_date)
-        self.process_date = process_date
+        self.process_date = "{{ ds }}"
         self.url = 'https://www.espn.com/nba/salaries/_/year/{year}/page/{page}/seasontype/4'
 
         

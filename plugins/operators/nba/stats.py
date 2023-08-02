@@ -12,10 +12,10 @@ class NBAStatsOperator(BaseOperator):
 
     template_fields = ['process_date']
 
-    def __init__(self, process_date, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.url = "https://site.web.api.espn.com/apis/common/v3/sports/basketball/nba/statistics/byathlete?region=us&lang=en&contentorigin=espn&isqualified=true&page={page}&limit=50&sort=general.avgMinutes%3Adesc&season={year}&seasontype=2"
-        self.process_date = process_date
+        self.process_date = "{{ ds }}"
 
     def request_data(self):
         print('Requesting page {page}'.format(page=self.page))
