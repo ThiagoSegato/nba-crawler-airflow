@@ -6,7 +6,7 @@ Autor: [@caiocolares](https://www.github.com/caiocolares)
 
 1. Clone o projeto:
 ```bash
-  git clone https://github.com/caiocolares/nba-crawler-airflow.git
+  git clone https://github.com/thiagosegato/nba-crawler-airflow.git
 ```
 
 2. Acesse a pasta:
