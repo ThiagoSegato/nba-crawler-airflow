@@ -3,23 +3,29 @@ Somente linux!
 
 ## Configurando o projeto
 
-1. Clone o projeto
+1. Clone o projeto:
 ```bash
   git clone https://github.com/caiocolares/nba-crawler-airflow.git
 ```
 
-2. Acesse a pasta
+2. Acesse a pasta:
 ```bash
   cd nba-crawler-airflow
 ```
 
-3. Crie um ambiente virtual python
+2.1. (Passo Opcional) A partir daqui você poderá optar a utilizar o Vscode. Caso prefira esse passo execute o comando abaixo para abrir a IDE:
+```
+code .
+```
+* Dica: Você pode iniciar um terminal dentro do próprio Vscode para continuar a configurar o projeto!
+
+3. Crie um ambiente virtual python:
 ```
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-4. Instale o Airflow e as bibliotecas necessárias
+4. Instale o Airflow e as bibliotecas necessárias:
 ```
 AIRFLOW_VERSION=2.6.2
 PYTHON_VERSION="$(python3 --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
@@ -30,12 +36,12 @@ pip install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}
 
 ## Rodando o projeto
 
-1. Ative o ambiente virtual python caso não esteja
+1. Ative o ambiente virtual python caso não esteja:
 ```
 source .venv/bin/activate
 ```
 
-2. Inicie o Airflow com 2 variáveis de ambiente
+2. Inicie o Airflow com 2 variáveis de ambiente:
 ```
 export AIRFLOW_HOME=$(pwd)
 export AIRFLOW__CORE__LOAD_EXAMPLES=False
@@ -43,7 +49,6 @@ airflow standalone
 ```
 
 ## Acessando a ferramenta
-
 Acesse [http://localhost:8080](http://localhost:8080)<br>
 Usuário: admin<br>
 Senha: Copie a senha no arquivo `standalone_admin_password.txt`
