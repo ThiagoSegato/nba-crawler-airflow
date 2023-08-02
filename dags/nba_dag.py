@@ -13,6 +13,6 @@ with DAG(
     estatisticas = NBAStatsOperator(task_id="estatisticas")
     salario = NBASalaryOperator(task_id="salario")
     biografia = NBABioOperator(task_id="biografia")
-    unifica = NBAMergeOperator(task_id="unifica")
+    unifica_arquivos = NBAMergeOperator(task_id="unifica_arquivos")
 
-    [estatisticas, salario] >> biografia >> unifica
+    [estatisticas, salario] >> biografia >> unifica_arquivos
